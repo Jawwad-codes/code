@@ -1,0 +1,125 @@
+/* utility classes */
+/* colors */
+:root{
+    --blue:#48AFFF;
+    --white-shade:#FFFFFF;
+    --hover-gray:#F3F4F4;
+    --transparent: transparent;
+}
+.flex{
+    display: flex;
+    align-items: center;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Open Sans", sans-serif;
+}
+html,body{
+    background-color: var(--white-shade);
+}
+/* nav bar */
+nav{
+    width: 100%;
+    height: 12vh;
+    position: relative;
+    padding: 1vw;
+    background: var(--blue);
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    height: 8vh;
+}
+#nav-icons-logo{
+    position: relative;
+    gap: 1.5vw;
+}
+#nav-buttons button{
+    position: relative;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 1.7vh 3.5vh;
+    color: var(--white-shade);
+}
+#nav-buttons .login{
+    border: 0;
+    border-radius: 3px;
+    color: var(--blue);
+    background-color:var(--white-shade);
+}
+#nav-buttons .register{
+    border: 1px solid var(--white-shade);
+    border-radius: 3px;
+    color: var(--white-shade);
+    background-color: var(--transparent);
+}
+#nav-buttons{
+    display: flex;
+    gap:  0.8vw;
+}
+.search-container {
+    width: 30%;
+    background-color: var(--white-shade);
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    margin-right: 10vw;
+    align-items: center;
+}
+
+.search-input {
+    width:30% ;
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 5px;
+    background-color:var(--white-shade);
+    border-radius: 5px;
+}
+
+.search-icon {
+    margin-left: 10px;
+    color: #666;
+}
+     
+@media only screen and (max-width: 768px) {
+    nav {
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo {
+        min-width: 120%;
+        justify-content: flex-start;
+        margin-left: 1vw;
+    
+    }
+
+    #nav-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #nav-buttons button {
+        display: none;
+    }
+
+    .search-container {
+        min-width: 50%;
+        height: 7vh;
+        margin-left: 19vw;
+        margin-right: 5vw;
+    
+    }
+}
